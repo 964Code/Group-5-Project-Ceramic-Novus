@@ -14,7 +14,7 @@ body {
   align-items: center;
   background-color: white;
   color: #555;
-  border-bottom: rgb(206, 204, 204) solid 2px;
+  border-bottom: 2px solid rgb(204, 203, 203);
 }
 
 .brand-title {
@@ -114,6 +114,7 @@ body {
   font-family: "Times New Roman", Times, serif;
   text-align: center;
   width: 30%;
+  border-radius: 20px;
 }
 
 .main-sub-container.mid {
@@ -123,6 +124,7 @@ body {
   font-family: "Times New Roman", Times, serif;
   text-align: center;
   width: 30%;
+  border-radius: 20px;
 }
 
 .main-sub-container.right {
@@ -132,6 +134,7 @@ body {
   font-family: "Times New Roman", Times, serif;
   text-align: center;
   width: 30%;
+  border-radius: 20px;
 }
 
 img {
@@ -139,6 +142,7 @@ img {
   width: 70%;
   margin: auto;
   padding-bottom: 10px;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -172,6 +176,7 @@ img {
   background-color: rgb(220, 180, 20);
   height: 500px;
   margin: auto;
+  border-radius: 20px;
 }
 
 /* ---------- FOOTER START ------- */
