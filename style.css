@@ -86,3 +86,114 @@ body {
   }
 }
 /* NAVBAR END --------------------------------------------------------------------- */
+
+/* ------ Main code start -------- */
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.main-sub-container.hero {
+  background-color: rebeccapurple;
+  flex-grow: 2;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.main-sub-container.left {
+  background-color: red;
+  flex-grow: 1;
+  padding: 30px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  width: 30%;
+}
+
+.main-sub-container.mid {
+  background-color: pink;
+  flex-grow: 1;
+  padding: 30px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  width: 30%;
+}
+
+.main-sub-container.right {
+  background-color: cyan;
+  flex-grow: 1;
+  padding: 30px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  width: 30%;
+}
+
+img {
+  display: block;
+  width: 70%;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-sub-container.hero {
+    background-color: rebeccapurple;
+    flex-grow: 2;
+    width: 95%;
+  }
+  .hero-image img {
+    width: 100%;
+  }
+
+  .main-sub-container.left,
+  .main-sub-container.mid,
+  .main-sub-container.right {
+    width: 95%;
+  }
+}
+
+/* ------ MAIN END ------ */
+
+/* --------- MID START --------- */
+.mid-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: rgb(220, 180, 20);
+  height: 500px;
+}
+
+/* ---------- FOOTER START ------- */
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+}
+
+.footer-sub-container.left {
+  flex-grow: 1;
+  background-color: royalblue;
+  height: 60px;
+}
+
+.footer-sub-container.mid {
+  flex-grow: 1;
+  background-color: rgb(151, 42, 30);
+  height: 60px;
+}
+
+.footer-sub-container.right {
+  flex-grow: 1;
+  background-color: springgreen;
+  height: 60px;
+}
