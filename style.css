@@ -4,12 +4,16 @@
 
 body {
   padding: 0;
+  /* margin: 52px 0 0 0; */
   margin: 0;
   background-color: snow;
 }
-
+/* Commented out properties for fixed navbar. Check later and implement functionality */
 .navbar {
   display: flex;
+  /* position: fixed;
+  top: 0;
+  width: 100%; */
   justify-content: space-between;
   align-items: center;
   background-color: white;
