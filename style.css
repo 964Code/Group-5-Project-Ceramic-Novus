@@ -102,39 +102,41 @@ body {
 
 .main-sub-container.hero {
   background-color: snow;
-  flex-grow: 2;
+  flex-grow: 5;
   width: 100%;
-  margin-bottom: 10px;
 }
 
 .main-sub-container.left {
-  background-color: red;
+  background-color: snow;
   flex-grow: 1;
   padding: 30px;
   font-family: "Times New Roman", Times, serif;
   text-align: center;
   width: 30%;
   border-radius: 20px;
+  border: 2px solid rgb(204, 203, 203);
 }
 
 .main-sub-container.mid {
-  background-color: pink;
+  background-color: snow;
   flex-grow: 1;
   padding: 30px;
   font-family: "Times New Roman", Times, serif;
   text-align: center;
   width: 30%;
   border-radius: 20px;
+  border: 2px solid rgb(204, 203, 203);
 }
 
 .main-sub-container.right {
-  background-color: cyan;
+  background-color: snow;
   flex-grow: 1;
   padding: 30px;
   font-family: "Times New Roman", Times, serif;
   text-align: center;
   width: 30%;
   border-radius: 20px;
+  border: 2px solid rgb(204, 203, 203);
 }
 
 img {
@@ -173,10 +175,11 @@ img {
   display: flex;
   flex-direction: row;
   width: 95%;
-  background-color: rgb(220, 180, 20);
+  background-color: snow;
   height: 500px;
   margin: auto;
   border-radius: 20px;
+  border: 2px solid rgb(204, 203, 203);
 }
 
 /* ---------- FOOTER START ------- */
@@ -185,20 +188,20 @@ img {
   display: flex;
   flex-direction: row;
   width: 100%;
-  border-top: rgb(206, 204, 204) solid 2px;
+  border: 2px solid rgb(204, 203, 203);
 }
 
 .footer-sub-container.left {
   flex-grow: 1;
   background-color: snow;
-  border-right: rgb(206, 204, 204) solid 2px;
+  border-right: 2px solid rgb(204, 203, 203);
   height: 60px;
 }
 
 .footer-sub-container.mid {
   flex-grow: 1;
   background-color: snow;
-  border-right: rgb(206, 204, 204) solid 2px;
+  border-right: 2px solid rgb(204, 203, 203);
   height: 60px;
 }
 
