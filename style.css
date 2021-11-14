@@ -114,8 +114,7 @@ body {
 .hero-text {
   padding-left: 100px;
   padding-right: 100px;
-  padding-bottom: 20px;
-  margin-top: 20px;
+  padding-bottom: 30px;
   text-align: justify;
 }
 
@@ -154,7 +153,7 @@ img {
   display: block;
   width: 100%;
   margin: auto;
-  padding-bottom: 10px;
+  padding: 30px 0;
 }
 
 .main-sub-container.hero img {
@@ -177,6 +176,13 @@ img {
     width: 100%;
   }
 
+  .hero-text {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 30px;
+    text-align: justify;
+  }
+
   .main-sub-container.left,
   .main-sub-container.mid,
   .main-sub-container.right {
@@ -184,12 +190,16 @@ img {
     padding: 20px 0px;
     border: 0;
   }
-  .text-container-main {
-    padding-left: 30px;
-  }
 
   .image-container-main img {
     width: 70%;
+  }
+
+  .text-container-main.left p,
+  .text-container-main.mid p,
+  .text-container-main.right p {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
