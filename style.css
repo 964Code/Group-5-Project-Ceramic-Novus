@@ -107,6 +107,18 @@ body {
   width: 100%;
 }
 
+.hero-text-container span {
+  display: flex;
+}
+
+.hero-text {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
 .main-sub-container.left {
   background-color: snow;
   flex-grow: 1;
@@ -172,6 +184,9 @@ img {
     padding: 20px 0px;
     border: 0;
   }
+  .text-container-main {
+    padding-left: 30px;
+  }
 
   .image-container-main img {
     width: 70%;
@@ -209,7 +224,7 @@ img {
 }
 
 .footer-sub-container.mid {
-  flex-grow: 1;
+  flex-grow: 3;
   background-color: snow;
   border-right: 2px solid rgb(204, 203, 203);
   height: 60px;
