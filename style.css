@@ -161,6 +161,10 @@ img {
   height: 500px;
 }
 
+hr {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .main-container {
     flex-direction: column;
@@ -200,6 +204,12 @@ img {
   .text-container-main.right p {
     padding-left: 10%;
     padding-right: 10%;
+    margin-bottom: 10%;
+  }
+
+  hr {
+    display: block;
+    width: 50%;
   }
 }
 
