@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ceramic Novus</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -18,8 +25,8 @@
         </a>
         <div class="navbar-links">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Product</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" target="site">Product</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
@@ -27,5 +34,18 @@
       </nav>
     </header>
     <script src="app.js"></script>
+    <!-- iframe for all other html pages to be displayed in -->
+    <div class="containers">
+      <iframe
+        src=""
+        title="site"
+        id="site"
+        name="site"
+        class="responsive-iframe"
+        height="100%"
+        style="border: none"
+      >
+    </div>
+      </iframe>
   </body>
 </html>
