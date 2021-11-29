@@ -7,3 +7,28 @@ toggleButton.addEventListener("click", () => {
 });
 
 // ----------------- NAVBAR JS END -----------------------------------
+
+// Product-page JS.
+
+const productsGrid = document.querySelector(".products-grid");
+
+const products = [
+  {
+    name: "clay1",
+    info: "adasdsadasdasdasdas asda sas das das d",
+  },
+  {
+    name: "clay2",
+    info: "adasdsadasdasdasdas asda sas das das d",
+  },
+  {
+    name: "clay3",
+    info: "adasdsadasdasdasdas asda sas das das d",
+  },
+];
+
+const productsList = products.map((element) => {
+  return `<a class="item">${element.name}</a>`;
+});
+
+productsGrid.innerHTML = productsList;

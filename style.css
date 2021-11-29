@@ -238,3 +238,15 @@ hr {
 .footer-text {
   text-align: center;
 }
+
+/* CSS Product page */
+
+/* Grid for products-display */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.products-grid .item {
+  border: 1px solid red;
+}
