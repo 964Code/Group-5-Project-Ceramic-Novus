@@ -1,0 +1,324 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  $main_color: #4c4c4c;
+  $bg_color:snow;
+
+
+
+
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: $bg_color;
+  }
+  
+  /* Hides the scrollbar */
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  
+  
+  /* ---------------- TEXT STYLING AND EFFECTS ------------- */
+  
+  /* Color for h1 and p tags */
+  h1, p {
+    color: $main_color;
+  }
+  
+  /* fadeInUp effect for p tags for different browsers */
+  @-webkit-keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 50%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+    }
+  }
+  @-moz-keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      -moz-transform: translate3d(0, 50%, 0);
+    }
+    100% {
+      opacity: 1;
+      -moz-transform: none;
+    }
+  }
+  @-o-keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      -o-transform: translate3d(0, 50%, 0);
+    }
+    100% {
+      opacity: 1;
+      -o-transform: none;
+    }
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 50%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  .u--fadeInUp {
+    -webkit-animation: fadeInUp 1s ease-in;
+    -moz-animation: fadeInUp 1s ease-in;
+    -o-animation: fadeInUp 1s ease-in;
+    animation: fadeInUp 1s ease-in;
+  }
+  
+  /* ---------------- END OF TEXT STYLING AND EFFECTS ------------- */
+  
+  
+  /* NAVBAR START
+  ----------------------------------------------------------------------- */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: $main_color;
+    border-bottom: 2px solid rgb(204, 203, 203);
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    border-bottom: $main_color solid 2px;
+  }
+  
+  @media (max-width: 768px) {
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+  }
+  
+  /* NAVBAR END --------------------------------------------------------------------- */
+  
+  
+  /* --------------- IMG STYLING AND EFFECTS --------------*/
+  
+  /* Rounded corners on the product images */
+  .rcorners1 {
+    border-radius: 20px;
+    padding: 0px;
+    width: 80%;
+  }
+  
+  /* Rounded corners on product category images */
+  .rcorners2 {
+    border-radius: 20px;
+    padding: 0px;
+  }
+  
+  /* Fade in effect for images */
+  img {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 30px 0;
+  
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+  }
+  
+  /* fadein effect */
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* fadein effect on different browsers */
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* fadein effect on different browsers */
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* --------------- END OF IMG STYLING AND EFFECTS --------------*/
+  
+  
+  /* --------------- STYLING FOR COLUMNS AND CONTAINERS + IFRAME --- */
+  
+  /* padding for columns */
+  .col-sm-4 {
+    padding: 50px;
+  }
+  
+  /* sets position and width for div class with changing image */
+  .container {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* container for embedded ifram */
+  .containers {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+  }
+  
+  /* Styles the iframe to fit in the container div with full height and width */
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* --------------- END OF STYLING FOR COLUMNS AND CONTAINERS + IFRAME --- */
+  
+  
+  /* -------------- CAROUSEL ---------------------- */
+  
+  /* setting margin and width for carousel wrapper */
+  .wrapper {
+    margin: 0 auto;
+    width: 95%;
+  }
+  
+  /* Adjusting the carousel-item dimensions */
+  .carousel-item img {
+    width: 100%;
+    height: 500px;
+    box-shadow: none;
+  }
+  
+  /* -------------- END OF CAROUSEL ---------------------- */
+  
+  
+  /*---------- CONTACT FORM -----------------*/
+  
+  
+  .contact-clean {
+    background: $bg_color;
+    padding: 80px 0
+  }
+  
+  @media (max-width:767px) {
+    .contact-clean {
+        padding: 20px 0
+    }
+  }
+  
+  .contact-clean form {
+    max-width: 480px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: $bg_color;
+    padding: 40px;
+    border-radius: 20px;
+    color: #505e6c;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1)
+  }
+  
+  @media (max-width:767px) {
+    .contact-clean form {
+        padding: 30px
+    }
+  }
+  
+  .contact-clean h2 {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 36px;
+    color: inherit
+  }
+  
+  .contact-clean .form-group:last-child {
+    margin-bottom: 5px
+  }
+  
+  .contact-clean form .form-control {
+    background: $bg_color;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+    outline: none;
+    color: inherit;
+    padding-left: 12px;
+    height: 42px
+  }
+  
+  .contact-clean form .form-control:focus {
+    border: 1px solid #b2b2b2
+  }
+  
+  .contact-clean form textarea.form-control {
+    min-height: 100px;
+    max-height: 260px;
+    padding-top: 10px;
+    resize: vertical;
+    resize: none
+  }
+  
+  .contact-clean form .btn {
+    padding: 16px 32px;
+    border: none;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    opacity: 0.9;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    line-height: 1;
+    outline: none !important
+  }
+  
+  .contact-clean form .btn:hover {
+    opacity: 1
+  }
+  
+  .contact-clean form .btn:active {
+    transform: translateY(1px)
+  }
+  
+  .contact-clean form .btn-primary {
+    background-color: $main_color;
+    margin-top: 15px;
+    color: $bg_color;
+  }
+  
+  /* --------------- END OF CONTACT FORM -------- */
