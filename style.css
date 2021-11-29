@@ -219,18 +219,6 @@ hr {
   }
 }
 
-/* --------- MID START --------- */
-/* .mid-container {
-  display: flex;
-  flex-direction: row;
-  width: 95%;
-  background-color: snow;
-  height: 500px;
-  margin: auto;
-  border: 2px 0 solid;
-  border-color: red;
-} */
-
 /* ---------- FOOTER START ------- */
 
 .footer-container {
@@ -258,6 +246,16 @@ hr {
 
 .products-grid .item {
   border: 1px solid red;
+  text-align: center;
+}
+
+.products-grid .item h2 {
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+.products-grid .item img {
+  padding: 0;
 }
 
 /* Modal */
@@ -306,4 +304,16 @@ hr {
   max-height: 450px;
   object-fit: cover;
   padding: 0;
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 425px) {
+  .products-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
