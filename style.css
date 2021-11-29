@@ -213,10 +213,8 @@ hr {
   }
 }
 
-/* ------ MAIN END ------ */
-
 /* --------- MID START --------- */
-.mid-container {
+/* .mid-container {
   display: flex;
   flex-direction: row;
   width: 95%;
@@ -225,33 +223,18 @@ hr {
   margin: auto;
   border: 2px 0 solid;
   border-color: red;
-}
+} */
 
 /* ---------- FOOTER START ------- */
 
 .footer-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   width: 100%;
   border: 2px solid rgb(204, 203, 203);
 }
 
-.footer-sub-container.left {
-  flex-grow: 1;
-  background-color: snow;
-  border-right: 2px solid rgb(204, 203, 203);
-  height: 60px;
-}
-
-.footer-sub-container.mid {
-  flex-grow: 3;
-  background-color: snow;
-  border-right: 2px solid rgb(204, 203, 203);
-  height: 60px;
-}
-
-.footer-sub-container.right {
-  flex-grow: 1;
-  background-color: snow;
-  height: 60px;
+.footer-text {
+  text-align: center;
 }
