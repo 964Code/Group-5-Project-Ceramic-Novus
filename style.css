@@ -252,3 +252,35 @@ hr {
 .products-grid .item {
   border: 1px solid red;
 }
+
+/* Modal */
+
+.modal-wrapper {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: 0;
+  left: 0;
+  z-index: 0;
+  /* Love this shit */
+  backdrop-filter: blur(5px);
+}
+
+.modal-wrapper.active {
+  display: block;
+}
+
+.modal-wrapper .modal {
+  position: absolute;
+  width: 500px;
+  height: 700px;
+  border: 1px solid red;
+  top: 50%;
+  left: 50%;
+  /* Calculates x & y axel and position it negative to its width and height */
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 1;
+}
