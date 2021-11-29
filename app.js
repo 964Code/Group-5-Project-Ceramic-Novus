@@ -15,20 +15,15 @@ const productsGrid = document.querySelector(".products-grid");
 const products = [
   {
     name: "clay1",
-    info: "adasdsadasdasdasdas asda sas das das d",
-  },
-  {
-    name: "clay2",
-    info: "adasdsadasdasdasdas asda sas das das d",
-  },
-  {
-    name: "clay3",
-    info: "adasdsadasdasdasdas asda sas das das d",
+    info: "test",
+    img: "./images/clay-item-1.jfif",
   },
 ];
 
-const productsList = products.map((element) => {
-  return `<a class="item">${element.name}</a>`;
-});
+const productsList = products
+  .map((element) => {
+    return `<div class="item"><img src="${element.img}" alt="${element.name}"><h2>${element.name}</h2><p>${element.info}</p></div>`;
+  })
+  .join("");
 
 productsGrid.innerHTML = productsList;
