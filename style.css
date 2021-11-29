@@ -1,3 +1,4 @@
+/* ClearFix for easier styling */
 * {
   box-sizing: border-box;
 }
@@ -8,6 +9,7 @@ body {
   background-color: snow;
 }
 
+/* Hides scroll/overflow for y-axis */
 body.modal-active {
   overflow-y: hidden;
 }
