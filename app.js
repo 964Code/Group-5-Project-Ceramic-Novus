@@ -65,7 +65,7 @@ const products = [
 
 const productsList = products
   .map((element) => {
-    return `<div js-grid-item class="item"><img js-grid-item-img src="${element.img}" alt="${element.name}"><h2 js-grid-item-label>${element.name}</h2><p js-grid-item-text>${element.info}</p></div>`;
+    return `<div js-grid-item class="item"><img src="${element.img}" alt="${element.name}"><h2>${element.name}</h2></div>`;
   })
   .join("");
 
@@ -74,19 +74,14 @@ productsGrid.innerHTML = productsList;
 const productsItem = document.querySelectorAll("[js-grid-item]");
 
 productsItem.forEach((item, index) => {
-  item.addEventListener("click", (e) => {
-    let image = item.querySelector("[js-grid-item-img]").src;
-    let label = item.querySelector("[js-grid-item-label]").innerHTML;
-    let text = item.querySelector("[js-grid-item-text]").innerHTML;
+  item.addEventListener("click", () => {
     console.log(index);
-
     //open modal, populate modal with these values
-    console.log(image, label, text);
     modalWrapper.classList.add("active");
     document.querySelector("body").classList.add("modal-active");
-    modal.querySelector("[js-modal-img]").src = image;
-    modal.querySelector("[js-modal-label]").innerHTML = label;
-    modal.querySelector("[js-modal-text]").innerHTML = text;
+    modal.querySelector("[js-modal-label]").innerHTML = products[index].name;
+    modal.querySelector("[js-modal-text]").innerHTML = products[index].info;
+    modal.querySelector("[js-modal-img]").src = products[index].img;
   });
 });
 
