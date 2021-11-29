@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lillaateljen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap" rel="stylesheet">
+
+    <title>Lilla Ateljén - Web shop</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navigationbar">
+            <div class="brand-title"><a href="home.html">Lilla Ateljén</a>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="menu">
+        <button aria-expanded="false" aria-controls="menu-list" class="button">
+            <span class="open">☰</span>
+
+            <span aria-expanded="true" class="closebtn">×</span>
+            MENU
+        </button>
+
+        <ul id="menu-list">
+            <li><a href="products.html">Butik</a></li>
+            <li id="abouthome"><a href="about.html">Om Lilla Ateljén</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="https://www.instagram.com/lilla.ateljen/">Instagram</a></li>
+            <li><a href="www.facebook.com">Facebook</a></li>
+        </ul>
+
+
+    </div>
+
+
+
+    </header>
+
+    <section class="gallery" id="main">
+        <h2>Välkommen till min butik</h2>
+        <img src="shop-thumbnails/1.jpg" alt="">
+        <img src="shop-thumbnails/2.jpg" alt="">
+        <img src="shop-thumbnails/3.jpg" alt="">
+        <img src="shop-thumbnails/4.jpg" alt="">
+        <img src="shop-thumbnails/5.jpg" alt="">
+        <img src="shop-thumbnails/6.jpg" alt="">
+        <img src="shop-thumbnails/7.jpg" alt="">
+        <img src="shop-thumbnails/8.jpg" alt="">
+        <img src="shop-thumbnails/9.jpg" alt="">
+        <img src="shop-thumbnails/10.jpg" alt="">
+        <img src="shop-thumbnails/11.jpg" alt="">
+        <img src="shop-thumbnails/12.jpg" alt="">
+        <img src="shop-thumbnails/13.jpg" alt="">
+        <img src="shop-thumbnails/14.jpg" alt="">
+        <img src="shop-thumbnails/15.jpg" alt="">
+        <img src="shop-thumbnails/16.jpg" alt="">
+        <img src="shop-thumbnails/17.jpg" alt="">
+        <img src="shop-thumbnails/18.jpg" alt="">
+        <img src="shop-thumbnails/19.jpg" alt="">
+        <img src="shop-thumbnails/20.jpg" alt="">
+        <img src="shop-thumbnails/21.jpg" alt="">
+        <img src="shop-thumbnails/22.jpg" alt="">
+        <img src="shop-thumbnails/23.jpg" alt="">
+        <img src="shop-thumbnails/24.jpg" alt="">
+
+    </section>
+
+    <div class="footer">
+        <div class="footer-content-right">
+            <a href="https://www.instagram.com/lilla.ateljen/"><img src="iconinsta.png" class="icon-style"
+                    alt="Instagram icon"></a>
+            <a href="www.facebook.com"><img src="iconfb.png" class="icon-style" alt="Facebook icon"></a>
+        </div>
+    </div>
+
+
+    <script>
+        const navButton = document.querySelector('button[aria-expanded]');
+
+        function toggleNav({ target }) {
+            const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+            navButton.setAttribute('aria-expanded', !expanded);
+            document.getElementById("menu-list").style.height = "1000px";
+
+
+
+
+        }
+
+
+        navButton.addEventListener('click', toggleNav);
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <script src="app.js"></script>
+
+
+    <script>
+
+        function handleClick(e) {
+            const src = e.currentTarget.querySelector('img').src;
+            overlayImage.src = src;
+            overlay.classList.add('open');
+        }
+
+
+        function close() {
+            overlay.classList.remove('open');
+        }
+
+
+
+
+        const html = digits.map(generateHTML).join('');
+        gallery.innerHTML = html;
+
+        const products = document.querySelectorAll('.product');
+
+        products.forEach(product => product.addEventListener('click', handleClick));
+
+        overlayClose.addEventListener('click', close);
+
+    </script>
+
+    <script src="app.js"></script>
+
+
+
+</body>
+
+</html>

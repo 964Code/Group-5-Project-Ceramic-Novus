@@ -1,0 +1,557 @@
+/* Reset css */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	  margin: 0;
+	  padding: 0;
+	  border: 0;
+	  font-size: 100%;
+	  font: inherit;
+	  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	  display: block;
+}
+body {
+	  line-height: 1;
+}
+ol, ul {
+	  list-style: none;
+}
+blockquote, q {
+	  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	  content: '';
+	  content: none;
+}
+table {
+	  border-collapse: collapse;
+	  border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Ground CSS for every page */
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: linear-gradient(to right, #a5a58d, #FFF1E6);
+    background-size: cover;
+    background-color: #f7f7ff;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top left;
+    background-origin: padding-box;
+    background-clip: padding-box;
+    font-family: 'Noto Serif Display', 'Cormorant Garamond', serif;
+}
+
+p {
+    line-height: 20px;
+    margin: 0 0 20px 0;
+    font-size: 400;
+}
+
+h1
+h2
+h3
+h4
+h5
+h6 {
+    margin: 0 0 5px 0;
+}
+
+/* Navbar and brand-title */
+
+.navigationbar {
+  justify-content: space-between;
+    color: #582F0E;
+    background-color: white;
+    text-align: center;
+    justify-items: center;
+
+}
+  
+.brand-title {
+    font-size: 1.5rem;
+    margin: 20px;
+    display: grid;
+    align-self: center;
+    text-decoration: none;
+    font-family: 'Yuji Syuku', serif;
+
+}
+  
+.brand-title a:visited {
+    color:#582F0E;
+    text-decoration: none;
+}
+
+.brand-title a:link {
+    color:#582F0E;
+    text-decoration: none;
+}
+
+.brand-title a:hover {
+    color:#582F0E;
+    text-decoration: none;
+}
+
+.brand-title a:active {
+    color:#582F0E;
+    text-decoration: none;
+}
+
+.navigationbar {
+    align-items: center;
+    position:fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/* Sidenav */
+
+#main {
+    transition: margin-left .5s;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#mainpage {
+    transition: margin-left .5s;
+    padding: 20px;
+    position: relative;
+}
+
+.button:focus {
+    outline: none;
+}
+
+
+.button {
+    position: fixed;
+    border: 0;
+    text-decoration: none;
+    background-color: #FFE8D6;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 15px;
+    margin-top: 23px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1em;
+    font-family: 'Yuji Syuku', serif;    
+}
+
+.button:hover {
+    background-color: #DDBEA9;
+    border: 0;
+    text-decoration: none;
+}
+
+[aria-controls="sidebarmenu-list"] {
+    display: block;
+}
+
+.sidebarmenu ul {
+    max-height: 0;
+    overflow: hidden;
+    top: 150;
+
+}
+
+.sidebarmenu a {
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #582F0E;
+    display: block;
+    transition: 0.3s;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    top: 150;
+
+}
+
+.sidebarmenu a:hover {
+    background-color: #FFE8D6;
+    text-decoration: none;
+    color :#582F0E;
+}
+
+[aria-expanded="true"] ~ ul {
+    max-height: 1000px;
+    left: 60;
+    top: 150;
+    float: none;
+    display: block;
+    text-align: left;
+    background-color:white; 
+    transition: 0.5s; 
+    font-family: 'Yuji Syuku', serif;
+}
+
+[aria-expanded="true"] ~ #sidebarmenu-list {
+    float:left;
+    text-align:left;
+    top: 150;
+    position: relative;
+    height: 100%; 
+    margin: 0;
+    left: 0;
+    top: 60px;
+    background-color:white; 
+    transition: 0.5s; 
+    font-family: 'Yuji Syuku', serif;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+}
+
+[aria-expanded="false"] .closebtn {
+    display: none;
+}
+
+[aria-expanded="true"] .closebtn {
+    display: inline-block;
+}
+
+[aria-expanded="true"] .open {
+    display: none;
+}
+
+/*
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}*/
+
+/* Images and effects on images */
+
+img:hover {
+    transform: scale(1.05);
+    transition: transform .5s cubic-bezier(.215,.61,.355,1),-webkit-transform .5s cubic-bezier(.215,.61,.355,1);
+}
+
+img {
+  max-width: 100%;
+}
+
+.hover-menu img {
+    transform: none;
+    position: relative;
+    max-width: 100%;
+    top: 0;
+    right: 0;
+    opacity: 1;
+    transition: 0.25s ease-in-out;
+ }
+
+.photo img {
+    height: 400px;
+    width: 400px;
+    border-radius: 200px;
+}
+
+.presentationpictures {
+    display: grid;
+    justify-content: center;
+}
+
+.picturespresentation img {
+  margin-top: 60px;
+  border: solid 10px white;
+  border-radius: 5px;
+  transform: none;
+  transition: none;
+}
+
+
+/* Home page Hover effect */
+
+.hover-menu {
+    max-width: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: 'Yuji Syuku', serif;    
+
+}
+  
+.hover-menu div {
+    position: absolute;
+    top: 0;
+    left: -120px;
+    width: 120px;
+    height: 100%;
+    transition: 0.25s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 3px solid #582F0E;
+}
+
+#homehome {
+    border-top: none;
+}
+  
+.hover-menu div a {
+    display: block;
+    line-height: 2;
+    color: #582F0E;
+    text-decoration: none;
+    padding: 5px 15px;
+    position: relative;
+    font-size: 19px;
+    transition: 0.25s ease-in-out;
+    border-top: solid 1px black;
+}
+
+.hover-menu div a:hover {
+    background-color: #FFF1E6;
+    transition: 0.25s ease-in-out;
+}
+
+.hover-menu:hover img {
+    opacity: 0.5;
+    right: -120px;
+}
+  
+.hover-menu:hover div {
+    left: 0;
+    opacity: 1;
+}
+
+svg text {
+    font-family: 'Yuji Syuku', serif;
+    letter-spacing: 10px;
+    stroke: #582F0E;
+    font-size: 60px;
+    font-weight: 50;
+    stroke-width: 2;
+    animation: textAnimate 10s infinite alternate;
+}
+  
+.centered {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes textAnimate {
+   0% {
+     stroke-dasharray: 0 50%;
+     stroke-dashoffset:  20%;
+     fill:#A5A58D;
+}
+   
+   100% {
+     stroke-dasharray: 50% 0;
+     stroke-dashoffset: -20%;
+     fill: hsla(189, 68%, 75%,0%)
+}
+}
+
+/* Body */
+
+.wrapper {
+    display: grid;
+    margin-left: 30px;
+}
+
+/* Shop */
+
+.gallery {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-auto-rows: 100px;
+    grid-auto-flow: dense;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.gallery h2 {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.gallery h2:before .gallery h2:after {
+    display: block;
+    content: '';
+    height: 10px;
+    background: linear-gradient(to left, yellow, transparent);
+}
+
+.gallery h2:after {
+    background: linear-gradient(to right, yellow, transparent);
+} 
+
+.product {
+    padding:30px;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+grid-gap:20px;
+top: 60px;
+  padding:30px;
+}
+
+
+/* Contact page */
+
+.contactpage {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    margin-top: 50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contactpage span {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+}
+
+/* Footer */
+
+.footer {
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #582F0E;
+  text-align: center;
+  font-family: 'Yuji Syuku', serif;
+}
+
+.footer-content-right {
+  padding-right: 5px;
+  margin-top:5px;
+  float: right;
+margin-bottom: 5px;
+}
+
+.icon-style {
+  width: 20px;
+  height:20px;
+  margin-top:5px;
+}
+
+.icon-style:hover {
+  transform: scale(1.05);
+  transition: transform .5s cubic-bezier(.215,.61,.355,1),-webkit-transform .5s cubic-bezier(.215,.61,.355,1);
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 1150px) {
+    .hover-menu div {
+    position: sticky;
+    width: 100%;
+    display: column;
+    left: 0;
+    height: 100%; 
+    transition: 0;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+}
+
+svg {
+    display: none;
+} 
+    
+    .hover-menu img {
+    position:static;
+    max-width: 100%;
+}
+
+    .hover-menu:hover img {
+    transition: none;
+    transform: none;
+    opacity: 1;
+}
+    
+    .hover-menu:hover div {
+    opacity: 1;
+}
+
+    .oneproduct {
+    grid-template-columns: 1fr;
+}
+
+    .logo {
+    display: grid;
+    justify-content: center;
+}
+  
+    .product {
+    display: grid;
+    justify-content: center;
+}
+}
+
+
+/* --------------- STYLING FOR COLUMNS AND CONTAINERS + IFRAME --- */
+
+/* padding for columns */
+.col-sm-4 {
+    padding: 50px;
+    padding-top: 100px;
+    position: fixed;
+  }
+  
+  /* sets position and width for div class with changing image */
+  .container {
+    position: relative;
+    width: 100%;
+  }
+  
+  

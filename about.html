@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lillaateljen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
+
+    <title>Lilla Ateljén - Om</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navigationbar">
+            <div class="brand-title"><a href="home.html">Lilla Ateljén</a>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="sidebarmenu">
+        <button aria-expanded="false" aria-controls="sidebarmenu-list" class="button">
+            <span class="open">☰</span>
+            <span aria-expanded="true" class="closebtn">×</span>
+            MENU
+        </button>
+
+        <ul id="sidebarmenu-list">
+            <li><a href="products.html">Butik</a></li>
+            <li id="abouthome"><a href="about.html">Om Lilla Ateljén</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="https://www.instagram.com/lilla.ateljen/">Instagram</a></li>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+        </ul>
+
+
+    </div>
+
+    <div id="main" class="items">
+        <div class="wrapper picturespresentation" style="max-width:500px">
+            <img class="mySlides" id="" src="deco/photo1.jpg">
+            <img class="mySlides" src="deco/photo2.jpg">
+            <img class="mySlides" src="deco/photo3.jpg">
+            <img class="mySlides" src="deco/photo4.jpg">
+            <img class="mySlides" src="deco/photo5.jpg">
+
+        </div>
+
+
+
+
+        <div class="wrapper">
+            <h2>Presentation</h2>
+            <p class=>Hej, jag heter Clémence Pelloquin och jag skapar keramik.</p>
+        </div>
+
+
+    </div>
+
+    <div class="footer">
+
+        <div class="footer-content-right">
+            <a href="https://www.instagram.com/lilla.ateljen/"><img src="iconinsta.png" class="icon-style"
+                    alt="Instagram icon"></a>
+            <a href="www.facebook.com"><img src="iconfb.png" class="icon-style" alt="Facebook icon"></a>
+        </div>
+    </div>
+
+    <script>
+        const navButton = document.querySelector('button[aria-expanded]');
+
+        function toggleNav({ target }) {
+            const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+            navButton.setAttribute('aria-expanded', !expanded);
+            document.getElementById("sidebarmenu-list").style.height = "1000px";
+        }
+
+
+        navButton.addEventListener('click', toggleNav);
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 7000);
+        }
+
+
+    </script>
+    <script src="app.js"></script>
+
+
+
+
+</body>
+
+</html>

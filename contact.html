@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lillaateljen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap" rel="stylesheet">
+
+
+    <title>Lilla Ateljén - Kontakta mig</title>
+</head>
+
+
+<header>
+    <nav class="navigationbar">
+        <div class="brand-title"><a href="home.html">Lilla Ateljén</a>
+        </div>
+    </nav>
+</header>
+
+
+
+<div class="sidebarmenu">
+    <button aria-expanded="false" aria-controls="sidebarmenu-list" class="button">
+        <span class="open">☰</span>
+
+        <span aria-expanded="true" class="closebtn">×</span>
+        MENU
+    </button>
+
+    <ul id="sidebarmenu-list">
+        <li><a href="products.html">Butik</a></li>
+        <li id="abouthome"><a href="about.html">Om Lilla Ateljén</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="https://www.instagram.com/lilla.ateljen/">Instagram</a></li>
+        <li><a href="https://www.facebook.com">Facebook</a></li>
+    </ul>
+
+
+</div>
+
+
+
+</header>
+
+
+
+<!-- Forumulär -->
+<div class="wrapper" id="main">
+    <section class="contactpage">
+
+        <span class="photo"><img src="photo.jpg" alt="Clémence Pelloquin"></span>
+
+        <span class="mailone">
+            Vill du komma i kontakt med mig?
+        </span>
+
+        <span class="mailtwo">
+            Kul! Skicka gärna ett mejl!
+        </span>
+
+        <span class="mailcontact">
+            <a href="mailto:bonjour@lillaateljen.com">
+                bonjour@lillaateljen.com</a>
+        </span>
+</div>
+
+<div class="footer">
+    <div class="footer-content-right">
+        <a href="https://www.instagram.com/lilla.ateljen/"><img src="iconinsta.png" class="icon-style"
+                alt="Instagram icon"></a>
+        <a href="https://www.facebook.com"><img src="iconfb.png" class="icon-style" alt="Facebook icon"></a>
+    </div>
+</div>
+
+<script>
+    const navButton = document.querySelector('button[aria-expanded]');
+
+    function toggleNav({ target }) {
+        const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+        navButton.setAttribute('aria-expanded', !expanded);
+        document.getElementById("sidebarmenu-list").style.height = "1000px";
+
+
+
+
+    }
+
+
+    navButton.addEventListener('click', toggleNav);
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
