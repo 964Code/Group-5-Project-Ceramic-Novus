@@ -28,10 +28,19 @@
     </header>
 
     <main>
+      <!-- Content added via JS, check code in app.js -->
       <div class="products-grid"></div>
     </main>
+    <!-- Content added/shown/hidden via JS on-click event, check in app.js -->
     <section class="modal-wrapper">
-      <div class="modal"></div>
+      <!-- Base structure for output of media-info,etc -->
+      <div class="modal" js-modal>
+        <img src="" alt="" js-modal-img />
+        <div class="modal-content">
+          <h2 js-modal-label></h2>
+          <p js-modal-text></p>
+        </div>
+      </div>
     </section>
 
     <footer>
