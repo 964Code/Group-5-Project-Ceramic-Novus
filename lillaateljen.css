@@ -1,0 +1,643 @@
+/* Repetitive values in the css become variables here */
+/* Reset css */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Ground CSS for every page */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, right top, from(#a5a58d), to(#FFF1E6));
+  background: linear-gradient(to right, #a5a58d, #FFF1E6);
+  background-size: cover;
+  background-color: #f7f7ff;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top left;
+  background-origin: padding-box;
+  background-clip: padding-box;
+  font-family: "Noto Serif Display", "Cormorant Garamond", serif;
+}
+
+p {
+  line-height: 20px;
+  margin: 0 0 20px 0;
+  font-size: 400;
+}
+
+h1
+h2
+h3
+h4
+h5
+h6 {
+  margin: 0 0 5px 0;
+}
+
+/* Navbar and brand-title */
+.navigationbar {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #582F0E;
+  background-color: white;
+  text-align: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row-align: center;
+      align-self: center;
+  text-decoration: none;
+  font-family: "Yuji Syuku", serif;
+}
+
+.brand-title a:visited {
+  color: #582F0E;
+  text-decoration: none;
+}
+
+.brand-title a:link {
+  color: #582F0E;
+  text-decoration: none;
+}
+
+.brand-title a:hover {
+  color: #582F0E;
+  text-decoration: none;
+}
+
+.brand-title a:active {
+  color: #582F0E;
+  text-decoration: none;
+}
+
+/* Sidenav with open and close buttons that react to clicks */
+#main {
+  -webkit-transition: margin-left .5s;
+  transition: margin-left .5s;
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button {
+  position: fixed;
+  border: 0;
+  text-decoration: none;
+  background-color: #FFE8D6;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px;
+  margin-top: 23px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1em;
+  font-family: "Yuji Syuku", serif;
+}
+
+.button:hover {
+  background-color: #DDBEA9;
+  border: 0;
+  text-decoration: none;
+}
+
+[aria-controls="sidebarmenu-list"] {
+  display: block;
+  position: fixed;
+}
+
+.sidebarmenu ul {
+  max-height: 0;
+  overflow: hidden;
+  top: 150;
+}
+
+.sidebarmenu a {
+  padding: 8px 8px 8px 9px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #582F0E;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  top: 150;
+}
+
+.sidebarmenu a:hover {
+  background-color: #FFE8D6;
+  text-decoration: none;
+  color: #582F0E;
+}
+
+[aria-expanded="true"] ~ ul {
+  left: 60;
+  float: none;
+  display: block;
+  text-align: left;
+  background-color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-family: "Yuji Syuku", serif;
+}
+
+[aria-expanded="true"] ~ #sidebarmenu-list {
+  max-height: 2000px;
+  float: left;
+  text-align: left;
+  position: relative;
+  margin: 0;
+  left: 0;
+  top: 60px;
+  background-color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-family: "Yuji Syuku", serif;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+}
+
+[aria-expanded="false"] .closebtn {
+  display: none;
+}
+
+[aria-expanded="true"] .closebtn {
+  display: inline-block;
+}
+
+[aria-expanded="true"] .open {
+  display: none;
+}
+
+/* Images and effects on images */
+img {
+  max-width: 100%;
+}
+
+#menuImg {
+  -webkit-transition: none;
+  transition: none;
+  -webkit-transform: none;
+          transform: none;
+}
+
+#zoom-img {
+  background-position: center;
+  background-size: cover;
+}
+
+.photo img {
+  height: 400px;
+  width: 400px;
+  border-radius: 200px;
+}
+
+.presentationpictures {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.productpictures {
+  display: -ms-grid;
+  display: grid;
+  margin: 0;
+}
+
+.presentationtext {
+  font-size: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row-align: center;
+      align-self: center;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.producttext {
+  font-family: "Yuji Syuku", serif;
+}
+
+.picturespresentation img {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.image_off, #home:hover .image_on {
+  display: none;
+  -webkit-transition: none;
+  transition: none;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.image_on, #home:hover .image_off {
+  display: block;
+  -webkit-transition: none;
+  transition: none;
+  -webkit-transform: none;
+          transform: none;
+}
+
+/* Home page Hover effect */
+.hover-menu {
+  max-width: 100%;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: "Yuji Syuku", serif;
+}
+
+.hover-menu img {
+  -webkit-transform: none;
+          transform: none;
+  position: relative;
+  max-width: 100%;
+  top: 0;
+  right: 0;
+  opacity: 1;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.hover-menu div {
+  position: absolute;
+  top: 0;
+  left: -120px;
+  width: 120px;
+  height: 100%;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 3px solid #582F0E;
+}
+
+#homehome {
+  border-top: none;
+}
+
+.hover-menu div a {
+  display: block;
+  line-height: 2;
+  color: #582F0E;
+  text-decoration: none;
+  padding: 5px 15px;
+  position: relative;
+  font-size: 19px;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  border-top: solid 1px black;
+}
+
+.hover-menu div a:hover {
+  background-color: #FFF1E6;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.hover-menu:hover img {
+  opacity: 0.5;
+  right: -120px;
+}
+
+.hover-menu:hover div {
+  left: 0;
+  opacity: 1;
+}
+
+/* Animated text on home page */
+svg text {
+  font-family: "Yuji Syuku", serif;
+  letter-spacing: 10px;
+  stroke: #582F0E;
+  font-size: 60px;
+  font-weight: 50;
+  stroke-width: 2;
+  -webkit-animation: textAnimate 10s infinite alternate;
+          animation: textAnimate 10s infinite alternate;
+}
+
+.centered {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+    fill: #A5A58D;
+  }
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
+    fill: rgba(148, 222, 235, 0);
+  }
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+    fill: #A5A58D;
+  }
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
+    fill: rgba(148, 222, 235, 0);
+  }
+}
+
+/* Shop */
+/* Shop padding */
+.col-sm-4 {
+  padding: 50px;
+  position: fixed;
+  font-family: "Yuji Syuku", serif;
+}
+
+/* sets position and width for div class with changing image in the shop */
+.container {
+  width: 100%;
+  font-family: "Yuji Syuku", serif;
+}
+
+/* About page */
+.items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 400px 400px;
+      grid-template-columns: 400px 400px;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-left: 0px;
+  margin-right: 0px;
+  grid-gap: 20px;
+}
+
+.presentation {
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+/* Contact page */
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+}
+
+.contactpage {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Noto Serif Display", "Cormorant Garamond", serif;
+}
+
+.contactpage span {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.mailcontact a {
+  font-style: oblique;
+  font-size: 30px;
+  color: #582F0E;
+  text-decoration: none;
+  outline: none;
+}
+
+.mailcontact a:hover {
+  text-decoration: none;
+  outline: none;
+  color: #582F0E;
+  font-style: bold;
+}
+
+/* Footer */
+.pagefooter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #582F0E;
+  text-align: right;
+  font-size: 15px;
+  font-family: "Yuji Syuku", serif;
+  background-color: #F0EFEB;
+}
+
+/* Responsive design */
+/* Responsive menu on home page */
+@media screen and (max-width: 1150px) {
+  .hover-menu div {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    display: column;
+    left: 0;
+    height: 100%;
+    -webkit-transition: 0;
+    transition: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border: none;
+  }
+  .hover-menu img {
+    position: static;
+    max-width: 100%;
+  }
+  .hover-menu:hover img {
+    -webkit-transition: none;
+    transition: none;
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  .hover-menu:hover div {
+    opacity: 1;
+  }
+  /* Animated text disappears on small screens */
+  svg {
+    display: none;
+  }
+}
+
+/* Presentation items that get centered when the screen is small */
+@media screen and (max-width: 900px) {
+  .items {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .presentationtext {
+    font-size: 20px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-row-align: center;
+        align-self: center;
+  }
+  /* Responsive sidebar that goes inline if the screen is small */
+  .button {
+    background-color: white;
+    text-align: center;
+    justify-items: center;
+    padding: 10px;
+    top: 50px;
+    width: 100%;
+    height: 44px;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  [aria-expanded="true"] ~ #sidebarmenu-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 104px;
+    width: 100%;
+    position: fixed;
+    max-height: 50px;
+  }
+  [aria-expanded="true"] ~ ul {
+    max-height: 60px;
+    display: inline;
+    text-align: center;
+  }
+  .sidebarmenu a {
+    font-size: 15px;
+    display: inline;
+  }
+}
+/*# sourceMappingURL=lillaateljen.css.map */

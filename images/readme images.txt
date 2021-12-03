@@ -1,1 +1,0 @@
-This folder should contain images for our project. 

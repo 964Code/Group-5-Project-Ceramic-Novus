@@ -1,38 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CN | Contact</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="brand-title">Ceramic Novus</div>
-        <a href="#" class="toggle-button">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">Product</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
 
-    <main></main>
-    <footer>
-      <div class="footer-container">
-        <p class="footer-text">Copyright 2021 &copy;</p>
-      </div>
-    </footer>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Keramik, Lilla Ateljén, Lergods, Kontakt">
+    <link rel="stylesheet" href="lillaateljen.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap" rel="stylesheet">
+
+
+    <title>Lilla Ateljén - Kontakta mig</title>
+</head>
+<!-- navigation bar that expands on the left on big screens and goes inline on small screens -->
+
+
+<header>
+    <nav class="navigationbar">
+        <div class="brand-title"><a href="index.html">Lilla Ateljén</a>
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="sidebarmenu">
+        <button aria-expanded="false" aria-controls="sidebarmenu-list" class="button">
+            <span class="open">☰</span>
+
+            <span aria-expanded="true" class="closebtn">×</span>
+            MENU
+        </button>
+
+        <ul id="sidebarmenu-list">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="products.html">Butik</a></li>
+            <li id="abouthome"><a href="about.html">Om</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="https://www.instagram.com/lilla.ateljen/">Instagram</a></li>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+        </ul>
+
+
+    </div>
+
+</header>
+
+
+
+<body>
+
+
+
+    <!-- contact page into grid to make it responsive -->
+
+    <div class="wrapper">
+        <section class="position-static contactpage" id="main">
+            <!-- lazy loading for sustainability -->
+
+
+            <span class="photo"><img src="images/photo.jpg" loading="lazy" alt="Clémence Pelloquin"></span>
+
+            <span>
+                Vill du komma i kontakt med mig?
+            </span>
+
+            <span>
+                Kul! Skicka gärna ett mejl!
+            </span>
+            <!-- mail adress -->
+
+            <span class="mailcontact">
+                <a href="mailto:bonjour@lillaateljen.com">
+                    bonjour@lillaateljen.com</a>
+            </span>
+        </section>
+    </div>
+
+    <!-- footer -->
+
+    <div class="pagefooter">
+        Clémence Pelloquin - 2021 - bonjour@lillaateljen.com
+
+
+    </div>
+    </div>
+
+
     <script src="app.js"></script>
-  </body>
+
+
+</body>
+
 </html>

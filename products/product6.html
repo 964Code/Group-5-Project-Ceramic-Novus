@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Keramik, Lergods, Skål, Frukostskål, Glass">
+    <link rel="stylesheet" href="../lillaateljen.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap" rel="stylesheet">
+    <title>Lilla Ateljén - Stor skål</title>
+
+</head>
+<!-- navigation bar that expands on the left on big screens and goes inline on small screens -->
+
+<header>
+    <nav class="navigationbar">
+        <div class="brand-title"><a href="../index.html">Lilla Ateljén</a>
+        </div>
+    </nav>
+
+    <div class="sidebarmenu">
+        <button aria-expanded="false" aria-controls="sidebarmenu-list" class="button">
+            <span class="open">☰</span>
+
+            <span aria-expanded="true" class="closebtn">×</span>
+            MENU
+        </button>
+
+        <ul id="sidebarmenu-list">
+            <li><a href="../index.html">Hem</a></li>
+            <li><a href="../products.html">Butik</a></li>
+            <li id="abouthome"><a href="../about.html">Om</a></li>
+            <li><a href="../contact.html">Kontakt</a></li>
+            <li><a href="https://www.instagram.com/lilla.ateljen/">Instagram</a></li>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+        </ul>
+
+
+    </div>
+</header>
+<!-- items into grid -->
+
+<body>
+    <div id="main">
+        <div class="items">
+            <!-- lazy loading for sustainability -->
+
+            <div class="productpresentation img-zoom-container position-static" loading="lazy">
+
+                <!-- image zoom -->
+
+                <style>
+                    #zoom-img {
+                        width: 400px;
+                        height: 400px;
+                        background: url("../images/bol2.jpg");
+                        background-position: center;
+                        background-size: cover;
+                    }
+                </style>
+
+                <div id="zoom-img"></div>
+
+
+            </div>
+
+            <!-- product text -->
+
+
+            <div class="producttext">
+
+                <br><br><br>
+                <h1></h1>
+                <br>
+                <p id="output6"></p>
+
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+
+    <div class="pagefooter">
+        Clémence Pelloquin - 2021 - bonjour@lillaateljen.com
+
+
+    </div>
+    </div>
+
+
+
+
+    <!-- script to bring the info about the product -->
+
+    <script type="text/javascript">
+
+        window.addEventListener('load', (event) => {
+            output = document.getElementById('output6');
+            output.innerHTML = ceramics[5].toString();
+        });
+
+    </script>
+
+
+
+    <script src="../app.js"></script>
+
+
+
+</body>
+
+
+
+
+
+
+</html>

@@ -1,105 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ceramic Novus</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="brand-title">Ceramic Novus</div>
-        <a href="#" class="toggle-button">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Keramik, Lilla Ateljén, Lergods">
+    <link rel="stylesheet" href="lillaateljen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap" rel="stylesheet">
+
+    <title>Lilla Ateljén - Hem</title>
+</head>
+
+<!-- white background on the whole page when smaller size -->
+
+<body id="index">
+
+
+    <!-- home page picture that goes to the right when hovering -->
+
+
+    <figure class="hover-menu">
+        <a href="index.html">
+
+            <img src="images/backgroundimage.jpg" alt="Background image Lilla Ateljén">
+            <!-- center animated text -->
+
+            <span class="centered">
+                <svg width="100%" height="100%">
+                    <defs>
+
+                        <circle fill="#be9ddf" cx="25" cy="25" r="3"></circle>
+
+
+                    </defs>
+
+
+
+
+
+                    <text x="50%" y="90%" text-anchor="middle">
+                        Lilla Ateljén
+                    </text>
+                </svg>
         </a>
-        <div class="navbar-links">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">Product</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+        <!-- menu appearing when hovering -->
 
-    <main>
-      <div class="main-container">
-        <div class="main-sub-container hero">
-          <img class="hero-image" src="images/hero-image.jfif" alt="" />
-        </div>
-        <span class="hero-text-container"
-          ><span class="hero-text"
-            >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-            minima deleniti illo voluptas, mollitia ea sint id. Optio
-            cupiditate, mollitia aperiam aliquam autem quidem odit maxime
-            molestiae voluptatibus, veniam iste! Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit.</span
-          ><span class="hero-text">
-            Doloremque voluptas consectetur tempore atque quam neque fugiat
-            error quod reprehenderit? Harum, culpa dolorem facilis ipsam
-            reprehenderit corporis rem deserunt cupiditate asperiores? Lorem,
-            ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti,
-            dolor minus ducimus, quaerat facilis est aliquid doloremque
-            repudiandae, nemo veniam iure a esse? Perspiciatis temporibus
-            consectetur ullam quibusdam earum.</span
-          >
-        </span>
-        <hr />
-        <div class="main-sub-container left">
-          <span class="image-container-main left"
-            ><img src="images/ceramic-items-bowls.jfif" alt="" srcset=""
-          /></span>
-          <span class="text-container-main left"
-            ><p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Distinctio ipsum neque beatae facilis molestias culpa earum
-              tenetur commodi ipsam unde consectetur consequuntur error, laborum
-              enim aspernatur totam? Assumenda, magni temporibus.
-            </p>
-            <hr />
-          </span>
-        </div>
-        <div class="main-sub-container mid">
-          <span class="image-container-main mid"
-            ><img src="images/ceramic-items-vase.jfif" alt="" srcset=""
-          /></span>
-          <span class="text-container-main mid"
-            ><p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              deserunt impedit temporibus nesciunt, quia eaque! Earum quo ipsa,
-              nemo, ea exercitationem blanditiis omnis facilis totam unde neque
-              debitis reprehenderit. Adipisci.
-            </p>
-            <hr />
-          </span>
-        </div>
-        <div class="main-sub-container right">
-          <span class="image-container-main right"
-            ><img src="images/ceramic-items-bowls.jfif" alt="" srcset=""
-          /></span>
-          <span class="text-container-main right"
-            ><p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Laudantium reiciendis non nemo fugit quasi sequi officiis laborum
-              vel cupiditate amet. Distinctio, laboriosam soluta sequi culpa
-              iste provident vel. Eos, accusamus.
-            </p>
-            <hr />
-          </span>
-        </div>
-      </div>
-    </main>
 
-    <footer>
-      <div class="footer-container">
-        <p class="footer-text">Copyright 2021 &copy;</p>
-      </div>
-    </footer>
+
+        <div class="menuhome">
+            <ul>
+                <li><a href="index.html" id="homehome">Hem</a></li>
+                <li><a href="products.html">Butik</a></li>
+                <li><a href="about.html">Om</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+
+
+            </ul>
+        </div>
+
+
+    </figure>
+
+
+
+
+
+
+
+
+
+
+
     <script src="app.js"></script>
-  </body>
+</body>
+
 </html>

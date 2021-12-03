@@ -1,104 +1,110 @@
-// ------------------- NAVBAR JS -------------------------------------
-const toggleButton = document.querySelector(".toggle-button");
-const navbarLinks = document.querySelector(".navbar-links");
+/* Shop page */
 
-toggleButton.addEventListener("click", () => {
-  navbarLinks.classList.toggle("active");
+/* Class for product objects */
+class Ceramic {
+  constructor(name, info) {
+    this.name = name;
+    this.info = info;
+  }
+
+  /* toString method to return information about products */
+  toString() {
+
+    return ('<h1>' + this.name + '</h1>' + '<br>' + '<p>' + this.info + '</p>');
+
+  }
+}
+
+/* Arrays for object properties */
+let names = ['Liten oval tallrik', 'Rundad lerskål', 'Ostbräda', 'Stor frukostskål', 'Liten mjölkkanna i stengods', 'Grönglaserad skål', 'Grön glaserad kopp', 'Kaffekopp i stengods', 'Liten vas i stengods'];
+let info = ['En tallrik som passar perfekt för plockmat.', 'En lerskål för snacks.', 'En elegant ostbrädda i mjuka färger.', 'En skål som blir fin till frukosten eller glass.', 'En liten kanna som kan servera både mjölk och vatten.', 'En fin grönglaserad skål som blir fin till efterrätter på middagar.', 'En kopp som blir perfekt till fikat på eftermiddagen när det ska serveras te och kaffe.', 'En brun kaffekopp i stengods som man ser fram emot att dricka kaffe i.', 'En liten vas i stengods för de första blommorna i maj.'];
+
+let ceramics = [];
+
+/* for loop to create objects */
+for (let i = 0; i < 9; i++) {
+  ceramics.push(new Ceramic(names[i], info[i]));
+}
+
+/* end of shop page */
+
+
+/* Expandable sidebar  */
+
+
+const navButton = document.querySelector('button[aria-expanded]');
+
+function toggleNav({ target }) {
+  const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+  navButton.setAttribute('aria-expanded', !expanded);
+  document.getElementById("sidebarmenu-list").style.height = "2000px";
+
+}
+
+navButton.addEventListener('click', toggleNav);
+
+
+/* Zoom on each product image on products pages */
+
+var addZoom = function (target) {
+  // get container and image
+  var container = document.getElementById(target),
+    imgsrc = container.currentStyle || window.getComputedStyle(container, false),
+    imgsrc = imgsrc.backgroundImage.slice(5, -1).replace(/"/g, ""),
+    img = new Image();
+
+  // load image and attach zoom
+  img.src = imgsrc;
+  img.onload = function () {
+    var imgWidth = img.naturalWidth,
+      imgHeight = img.naturalHeight,
+      ratio = imgHeight / imgWidth,
+      percentage = ratio * 100 + '%';
+
+    // zoom when the mouse moves
+    container.onmousemove = function (e) {
+      var boxWidth = container.clientWidth,
+        rect = e.target.getBoundingClientRect(),
+        xPos = e.clientX - rect.left,
+        yPos = e.clientY - rect.top,
+        xPercent = xPos / (boxWidth / 100) + "%",
+        yPercent = yPos / ((boxWidth * ratio) / 100) + "%";
+
+      Object.assign(container.style, {
+        backgroundPosition: xPercent + ' ' + yPercent,
+        backgroundSize: imgWidth + 'px'
+      });
+    };
+
+    // reset when the mouse leaves the pictures
+    container.onmouseleave = function (e) {
+      Object.assign(container.style, {
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'
+      });
+    };
+  }
+};
+
+window.addEventListener("load", function () {
+  addZoom("zoom-img");
 });
 
-// ----------------- NAVBAR JS END -----------------------------------
+/* Carousel/slideshow on presentation page */
 
-// Product-page JS.
-// Variables declared for targeting specific elements.
-if (document.querySelector(".products-grid")) {
-  const productsGrid = document.querySelector(".products-grid");
-  const modalWrapper = document.querySelector(".modal-wrapper");
-  const modal = modalWrapper.querySelector("[js-modal]");
+var myIndex = 0;
+carousel();
 
-  // Object array containing information about products.
-  const products = [
-    {
-      name: "clay1",
-      info: "Item 1",
-      img: "./images/clay-item-1.jfif",
-    },
-    {
-      name: "clay2",
-      info: "Item 2",
-      img: "./images/clay-item-1.jfif",
-    },
-    {
-      name: "clay3",
-      info: "Item 3",
-      img: "./images/clay-item-1.jfif",
-    },
-    {
-      name: "clay4",
-      info: "Item 4",
-      img: "./images/clay-item-1.jfif",
-    },
-    {
-      name: "clay5",
-      info: "Item 5",
-      img: "./images/clay-item-1.jfif",
-    },
-    {
-      name: "clay6",
-      info: "Item 6",
-      img: "./images/clay-item-1.jfif",
-    },
-    {
-      name: "clay7",
-      info: "Item 7",
-      img: "./images/clay-item-1.jfif",
-    },
-    {
-      name: "clay8",
-      info: "Item 8",
-      img: "./images/clay-item-1.jfif",
-    },
-    {
-      name: "clay9",
-      info: "Item 9",
-      img: "./images/clay-item-1.jfif",
-    },
-  ];
-
-  // Variable containing HTML-elements. Map-function returnes value, in this case a div for each index in products array.
-  const productsList = products
-    .map((element) => {
-      return `<div js-grid-item class="item"><img src="${element.img}" alt="${element.name}"><h2>${element.name}</h2></div>`;
-    })
-    .join("");
-  // Join had to be added so no characters get inbetween. W/o join all elements would follow with a ",", quirk of JS?
-
-  //productsGrid inner HTML becomes the result of the array-function above.
-  productsGrid.innerHTML = productsList;
-
-  // Selects and saves all the new DOM-elements created above in a array.
-  const productsItem = document.querySelectorAll("[js-grid-item]");
-
-  // forEach array/item add a click-event listener.
-  productsItem.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      console.log(index);
-      //open modal, populate modal with these values
-
-      //ModalWrapper is hidden by default with display:none. This adds class active which has display:block, makes it visable.
-      modalWrapper.classList.add("active");
-      //Modal-active has overflow hidden, no scrolling along y-axis.
-      document.querySelector("body").classList.add("modal-active");
-      // Outputs information on the modal from the array products with the right index which we get when clicking item.
-      modal.querySelector("[js-modal-label]").innerHTML = products[index].name;
-      modal.querySelector("[js-modal-text]").innerHTML = products[index].info;
-      modal.querySelector("[js-modal-img]").src = products[index].img;
-    });
-  });
-
-  modalWrapper.addEventListener("click", () => {
-    // Hides modal.
-    modalWrapper.classList.remove("active");
-    // Removes active class that hinders scrolling along y-axis
-    document.querySelector("body").classList.remove("modal-active");
-  });
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) { myIndex = 1 }
+  x[myIndex - 1].style.display = "block";
+  setTimeout(carousel, 7000);
 }
+
+
